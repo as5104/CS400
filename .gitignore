@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Dataset
+data/
+
+# Model checkpoints
+checkpoints/
+*.pth
+*.pt
+
+
+# IDE
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db
+
+gpuTest.py
