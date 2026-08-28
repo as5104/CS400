@@ -318,7 +318,7 @@ Linear: torch.Size([1, 10])
 - Validation: 5,000
 - Test: 10,000
 
-- Model: BasicCNN
+- Model: ResNet18
 - Batch size: 128
 
 - Loss: CrossEntropyLoss
