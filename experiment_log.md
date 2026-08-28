@@ -287,3 +287,110 @@ Global Average Pool: torch.Size([1, 512, 1, 1])
 Flatten: torch.Size([1, 512])
 Linear: torch.Size([1, 10])
 
+## ResNet18 Training 
+
+### Training Set up
+
+Dataset: CIFAR-10
+Train: 45,000
+Validation: 5,000
+Test: 10,000
+
+Model: BasicCNN
+Batch size: 128
+
+Loss: CrossEntropyLoss
+Optimizer: AdamW
+Learning rate: 0.001
+Weight decay: 0.0005
+
+Epochs: 50
+
+### CNN experiment 1 result
+
+Epoch 1  → 57.58%
+Epoch 2  → 68.32%
+Epoch 3  → 70.22%
+Epoch 4  → 79.36%
+Epoch 6  → 82.54%
+Epoch 7  → 84.04%
+Epoch 8  → 85.50%
+Epoch 9  → 87.90%
+Epoch 11 → 88.06%
+Epoch 13 → 91.28%
+Epoch 15 → 91.50%
+Epoch 16 → 92.56%
+Epoch 17 → 93.12%
+Epoch 18 → 93.76%
+Epoch 20 → 95.06%
+Epoch 22 → 95.12%
+Epoch 24 → 95.96%
+Epoch 29 → 96.64%
+Epoch 30 → 97.26%
+Epoch 37 → 97.74%
+Epoch 39 → 97.90%
+Epoch 40 → 98.12%
+Epoch 43 → 98.36%
+Epoch 47 → 98.42%
+
+Total training time: 44.07 minutes
+Best validation accuracy: 98.42%
+Best epoch: 47
+
+## ResNet Test Results
+
+Test results:
+Test loss: 0.4292
+Test accuracy: 91.51%
+Weighted precision: 0.9166
+Weighted recall: 0.9151
+Weighted F1: 0.9153
+
+airplane     Precision: 90.16%  Recall: 95.30%  F1: 92.66%
+automobile   Precision: 96.95%  Recall: 95.30%  F1: 96.12%
+bird         Precision: 85.03%  Recall: 90.30%  F1: 87.58%
+cat          Precision: 85.84%  Recall: 81.20%  F1: 83.45%
+deer         Precision: 92.65%  Recall: 92.00%  F1: 92.32%
+dog          Precision: 83.40%  Recall: 89.90%  F1: 86.53%
+frog         Precision: 96.16%  Recall: 90.20%  F1: 93.09%
+horse        Precision: 96.08%  Recall: 93.20%  F1: 94.62%
+ship         Precision: 96.76%  Recall: 92.50%  F1: 94.58%
+truck        Precision: 93.61%  Recall: 95.20%  F1: 94.40%
+
+### visualize_resnet_filters.py
+
+First convolution weight shape: torch.Size([64, 3, 3, 3])
+Number of filters: 64
+Channels per filter: 3
+
+### visualize_resnet_features.py
+
+True class: cat
+Predicted class: cat
+
+initial_conv feature map shape: (64, 32, 32)
+layer1 feature map shape: (64, 32, 32)
+layer2 feature map shape: (128, 16, 16)
+layer3 feature map shape: (256, 8, 8)
+layer4 feature map shape: (512, 4, 4)
+
+### visualize_resnet_residual_block.py
+
+A residual block from Layer 1 was visualized using a correctly classified CIFAR-10 test image.
+
+The block received an input of shape 64 × 32 × 32. Since the input and output dimensions matched, an identity shortcut was used.
+
+The visualization showed the main-path representation F(x), the shortcut representation S(x), their element-wise sum F(x) + S(x), and the final representation after ReLU.
+
+This demonstrates the core residual operation:
+
+y = ReLU(F(x) + S(x))
+
+For this block, S(x) = x.
+
+
+Input to residual block: torch.Size([1, 64, 32, 32])
+Main path output: torch.Size([1, 64, 32, 32])
+Shortcut output: torch.Size([1, 64, 32, 32])
+Combined output: torch.Size([1, 64, 32, 32])
+Residual block output: torch.Size([1, 64, 32, 32])

@@ -1,0 +1,28 @@
+ResNet-18 Experiment 1
+
+Dataset: CIFAR-10
+Training samples: 45000
+Validation samples: 5000
+Test samples: 10000
+
+Model: ResNet18
+Parameters: 11173962
+Trainable parameters: 11173962
+
+Batch size: 128
+Epochs: 50
+Optimizer: AdamW
+Learning rate: 0.001
+Weight decay: 0.0005
+Loss function: CrossEntropyLoss
+
+Best epoch: 47
+Best validation accuracy: 98.42%
+Best validation loss: 0.0564
+
+Final training loss: 0.0404
+Final training accuracy: 98.56%
+Final validation loss: 0.0685
+Final validation accuracy: 98.30%
+
+Total training time: 44.07 minutes

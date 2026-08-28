@@ -1,0 +1,13 @@
+{
+    "model": "ResNet18",
+    "checkpoint": "checkpoints/resnet18_best.pth",
+    "checkpoint_epoch": 47,
+    "checkpoint_validation_accuracy": 98.42,
+    "test_loss": 0.42924055547714235,
+    "test_accuracy": 0.9151,
+    "test_accuracy_percent": 91.51,
+    "weighted_precision": 0.9166265065183421,
+    "weighted_recall": 0.9151,
+    "weighted_f1": 0.9153462915983366,
+    "test_samples": 10000
+}
