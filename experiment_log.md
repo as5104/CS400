@@ -218,3 +218,72 @@ block3 feature map shape: (64, 16, 16)
 block4 feature map shape: (64, 16, 16)
 block5 feature map shape: (128, 8, 8)
 block6 feature map shape: (128, 8, 8)
+
+
+## For testing ResNet18 (resnet.py) before training
+
+### Architecture
+
+For a single image,
+
+Input
+[3, 32, 32]
+
+Initial Conv
+[64, 32, 32]
+
+Stage 1
+[64, 32, 32]
+
+Stage 2
+[128, 16, 16]
+
+Stage 3
+[256, 8, 8]
+
+Stage 4
+[512, 4, 4]
+
+Global Average Pool
+[512, 1, 1]
+
+Flatten
+[512]
+
+Linear
+[10]
+
+### test_resnet.py output
+
+Device: cuda
+GPU: NVIDIA GeForce RTX 4060 Laptop GPU
+Input shape: torch.Size([128, 3, 32, 32])
+Output shape: torch.Size([128, 10])
+Total parameters: 11173962
+Trainable parameters: 11173962
+
+### inspect_resnet.py output
+
+Device: cuda
+Input shape: torch.Size([1, 3, 32, 32])
+
+Initial Conv: torch.Size([1, 64, 32, 32])
+Initial BatchNorm: torch.Size([1, 64, 32, 32])
+Initial ReLU: torch.Size([1, 64, 32, 32])
+
+Layer 1, Block 1: torch.Size([1, 64, 32, 32])
+Layer 1, Block 2: torch.Size([1, 64, 32, 32])
+
+Layer 2, Block 1: torch.Size([1, 128, 16, 16])
+Layer 2, Block 2: torch.Size([1, 128, 16, 16])
+
+Layer 3, Block 1: torch.Size([1, 256, 8, 8])
+Layer 3, Block 2: torch.Size([1, 256, 8, 8])
+
+Layer 4, Block 1: torch.Size([1, 512, 4, 4])
+Layer 4, Block 2: torch.Size([1, 512, 4, 4])
+
+Global Average Pool: torch.Size([1, 512, 1, 1])
+Flatten: torch.Size([1, 512])
+Linear: torch.Size([1, 10])
+
