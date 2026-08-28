@@ -1,0 +1,13 @@
+{
+    "model": "BasicCNN",
+    "checkpoint": "checkpoints/cnn_best.pth",
+    "checkpoint_epoch": 50,
+    "checkpoint_validation_accuracy": 94.24,
+    "test_loss": 0.48852411923408506,
+    "test_accuracy": 0.8654,
+    "test_accuracy_percent": 86.53999999999999,
+    "weighted_precision": 0.8677330910730734,
+    "weighted_recall": 0.8654,
+    "weighted_f1": 0.8655015475835075,
+    "test_samples": 10000
+}
