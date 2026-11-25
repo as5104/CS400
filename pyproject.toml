@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cs400-core"
+version = "0.1.0"
+description = "Local multi-objective ResNet search research core"
+requires-python = ">=3.11"
+dependencies = ["numpy>=1.26,<3", "torch>=2.9,<3", "torchvision>=0.24,<1", "optuna==4.5.0", "Pillow>=10"]
+
+[project.optional-dependencies]
+analysis = ["scikit-learn>=1.5,<2"]
+reporting = ["matplotlib>=3.9,<4", "reportlab>=4,<5"]
+
+[project.scripts]
+cs400 = "cs400.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["cs400*"]
+
+[tool.setuptools.package-data]
+cs400 = ["dashboard.html"]
+

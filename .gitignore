@@ -1,30 +1,97 @@
-# Python
-__pycache__/
-*.py[cod]
-*$py.class
-
-# Virtual environments
+# Python environments, caches and package builds
 .venv/
 venv/
 env/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+htmlcov/
+build/
+dist/
 
-# Jupyter
-.ipynb_checkpoints/
-
-# Dataset
-data/
-
-# Model checkpoints
-checkpoints/
-*.pth
+# Local datasets, training state, uploads and working directories
+/data/
+/runs/
+/workspace/
+/tmp/
 *.pt
+*.pth
+*.ckpt
+*.safetensors
+*.onnx
+*.sqlite
+*.sqlite3
+*.db
+*.db-wal
+*.db-shm
+*.log
 
-
-# IDE
+# Local credentials and editor settings
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+.idea/
 .vscode/
-
-# OS
 .DS_Store
 Thumbs.db
 
-gpuTest.py
+# Generated files stay local except the explicitly selected evidence/report.
+/output/*
+!/output/final-results/
+/output/final-results/*
+!/output/final-results/summary.json
+!/output/final-results/Results_Summary.md
+!/output/final-results/models.csv
+!/output/final-results/method-summary.csv
+!/output/final-results/severity-summary.csv
+!/output/final-results/corruption-conditions.csv
+!/output/final-results/epoch-history.csv
+!/output/final-results/search-comparison/
+/output/final-results/search-comparison/*
+!/output/final-results/search-comparison/comparison.json
+!/output/final-verification/
+/output/final-verification/*
+!/output/final-verification/custom-dashboard-demo.json
+!/output/main-motpe-full-power-note.md
+!/output/pdf/
+/output/pdf/*
+!/output/pdf/CS400_Final_Project_Report.pdf
+!/output/latex/
+/output/latex/*
+!/output/latex/CS400_Final_Report/
+/output/latex/CS400_Final_Report/*
+!/output/latex/CS400_Final_Report/main.tex
+!/output/latex/CS400_Final_Report/README.txt
+!/output/latex/CS400_Final_Report/figures/
+/output/latex/CS400_Final_Report/figures/*
+!/output/latex/CS400_Final_Report/figures/hypervolume.pdf
+!/output/latex/CS400_Final_Report/figures/pareto.pdf
+!/output/latex/CS400_Final_Report/figures/severity.pdf
+!/output/latex/CS400_Final_Report/figures/system-flow.pdf
+
+# Superseded long-form planning draft; concise framework is tracked instead.
+/docs/CS400_Project_Framework.md
+
+# Optional exports, downloads and LaTeX compilation products
+*.zip
+*.tar
+*.tar.gz
+*.7z
+*.docx
+*.pptx
+*.aux
+*.toc
+*.out
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.bak
+*.tmp
+
