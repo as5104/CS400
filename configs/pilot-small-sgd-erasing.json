@@ -1,0 +1,9 @@
+{
+  "depth": "1-1-1-1",
+  "width": 16,
+  "optimizer": "sgd",
+  "learning_rate": 0.05,
+  "weight_decay": 0.0005,
+  "dropout": 0.2,
+  "augmentation": "erasing"
+}

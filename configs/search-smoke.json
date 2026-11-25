@@ -1,0 +1,16 @@
+{
+  "full_epochs": 9,
+  "warmup_epochs": 5,
+  "batch_size": 128,
+  "precision": "fp32",
+  "workers": 0,
+  "seed": 42,
+  "rungs": [3, 6, 9],
+  "survivors": [2, 1],
+  "cohort_size": 4,
+  "startup_trials": 2,
+  "max_parameters": 6000000,
+  "deterministic": true,
+  "pilot_confirmed": true,
+  "active_search_seconds": 1800
+}
