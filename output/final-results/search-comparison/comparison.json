@@ -1,0 +1,238 @@
+{
+  "common_settings": {
+    "epoch_cost_seconds": 39.0,
+    "hardware": {
+      "cuda": "13.0",
+      "cudnn": 91200,
+      "device": "cuda",
+      "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU",
+      "numpy": "2.2.6",
+      "os": "Windows-11-10.0.26300-SP0",
+      "python": "3.13.3",
+      "source_fingerprint": "a846f56303fd7aad0e542df8764b9f5480c537125685254bc5092f8a714f5409",
+      "torch": "2.9.1+cu130",
+      "torchvision": "0.24.1+cu130"
+    },
+    "manifest_id": "ec114b113df31a74f596064528aaaaf0da3f3814b80379be5d7e53bdfb685024",
+    "protocol": {
+      "active_search_seconds": 18900,
+      "batch_size": 128,
+      "cohort_size": 4,
+      "deterministic": true,
+      "full_epochs": 60,
+      "max_parameters": 6000000,
+      "precision": "fp32",
+      "rungs": [
+        15,
+        30,
+        60
+      ],
+      "startup_trials": 4,
+      "survivors": [
+        2,
+        1
+      ],
+      "warmup_epochs": 5,
+      "workers": 0
+    }
+  },
+  "hypervolume_definition": "Union of minimization boxes in (1-accuracy, parameters/parameter_reference, training_seconds/seconds_reference)",
+  "interpretation": "Higher hypervolume is better at this common reference; single-seed results are descriptive, not evidence of statistical superiority. Report unused budgets alongside final scores.",
+  "objective_source": "validation_only",
+  "reference": {
+    "error": 1.0,
+    "parameter_reference": 6000000,
+    "seconds_reference": 3600.0
+  },
+  "schema": 1,
+  "searches": [
+    {
+      "active_budget_seconds": 18900,
+      "active_seconds": 13952.939604899904,
+      "best_validation_accuracy": 0.9212,
+      "budget_utilization": 0.7382507727460267,
+      "completed": 8,
+      "hypervolume": 0.4692042804975612,
+      "hypervolume_history": [
+        {
+          "active_seconds": 2232.8238364999997,
+          "hypervolume": 0.17722366621738078
+        },
+        {
+          "active_seconds": 3819.142800899979,
+          "hypervolume": 0.463714744623774
+        },
+        {
+          "active_seconds": 5433.226601899951,
+          "hypervolume": 0.4655145796878431
+        },
+        {
+          "active_seconds": 7082.642016999947,
+          "hypervolume": 0.46815715770273814
+        },
+        {
+          "active_seconds": 8815.226883799885,
+          "hypervolume": 0.46815715770273814
+        },
+        {
+          "active_seconds": 10508.708033099887,
+          "hypervolume": 0.46833910317470834
+        },
+        {
+          "active_seconds": 12268.726620199915,
+          "hypervolume": 0.4683391031747083
+        },
+        {
+          "active_seconds": 13952.9335347999,
+          "hypervolume": 0.4692042804975612
+        }
+      ],
+      "method": "random",
+      "overrun_seconds": 0.0,
+      "pareto_count": 5,
+      "proposed_candidates": 8,
+      "pruning": false,
+      "run": "C:\\Users\\ANKIT\\Documents\\CS400\\runs\\main-random-full",
+      "seed": 42,
+      "stop_reason": "insufficient_estimated_budget_for_next_cohort"
+    },
+    {
+      "active_budget_seconds": 18900,
+      "active_seconds": 17574.60765869997,
+      "best_validation_accuracy": 0.9212,
+      "budget_utilization": 0.9298734210952365,
+      "completed": 7,
+      "hypervolume": 0.4833169789520498,
+      "hypervolume_history": [
+        {
+          "active_seconds": 2287.3973758000066,
+          "hypervolume": 0.17113870280454327
+        },
+        {
+          "active_seconds": 4118.022470899974,
+          "hypervolume": 0.41315862858477403
+        },
+        {
+          "active_seconds": 5839.491643799993,
+          "hypervolume": 0.43598781376784773
+        },
+        {
+          "active_seconds": 7407.3085030000075,
+          "hypervolume": 0.4576421237150017
+        },
+        {
+          "active_seconds": 10795.456230400014,
+          "hypervolume": 0.45905948291702586
+        },
+        {
+          "active_seconds": 13994.574034999998,
+          "hypervolume": 0.4833169789520498
+        },
+        {
+          "active_seconds": 17574.60280819994,
+          "hypervolume": 0.4833169789520498
+        }
+      ],
+      "method": "motpe",
+      "overrun_seconds": 0.0,
+      "pareto_count": 5,
+      "proposed_candidates": 16,
+      "pruning": true,
+      "run": "C:\\Users\\ANKIT\\Documents\\CS400\\runs\\main-motpe-halving",
+      "seed": 42,
+      "stop_reason": "insufficient_estimated_budget_for_next_cohort"
+    },
+    {
+      "active_budget_seconds": 18900,
+      "active_seconds": 14613.78666470002,
+      "best_validation_accuracy": 0.9212,
+      "budget_utilization": 0.7732162256455036,
+      "completed": 6,
+      "hypervolume": 0.44423716744096575,
+      "hypervolume_history": [
+        {
+          "active_seconds": 2294.790538100002,
+          "hypervolume": 0.17023064567134588
+        },
+        {
+          "active_seconds": 4161.900192899979,
+          "hypervolume": 0.40561106072212616
+        },
+        {
+          "active_seconds": 5844.742138699978,
+          "hypervolume": 0.4409817017238849
+        },
+        {
+          "active_seconds": 7545.973380999989,
+          "hypervolume": 0.4435920068075929
+        },
+        {
+          "active_seconds": 11099.020778999955,
+          "hypervolume": 0.44376543124830536
+        },
+        {
+          "active_seconds": 14613.782195100037,
+          "hypervolume": 0.44423716744096575
+        }
+      ],
+      "method": "random",
+      "overrun_seconds": 0.0,
+      "pareto_count": 4,
+      "proposed_candidates": 12,
+      "pruning": true,
+      "run": "C:\\Users\\ANKIT\\Documents\\CS400\\runs\\main-random-halving",
+      "seed": 42,
+      "stop_reason": "insufficient_estimated_budget_for_next_cohort"
+    },
+    {
+      "active_budget_seconds": 18900,
+      "active_seconds": 16168.039319299976,
+      "best_validation_accuracy": 0.9212,
+      "budget_utilization": 0.8554518158359776,
+      "completed": 8,
+      "hypervolume": 0.41221720981539484,
+      "hypervolume_history": [
+        {
+          "active_seconds": 2172.494165699987,
+          "hypervolume": 0.18357778012891668
+        },
+        {
+          "active_seconds": 4262.409756699984,
+          "hypervolume": 0.35823255770378454
+        },
+        {
+          "active_seconds": 6074.957617200038,
+          "hypervolume": 0.41107896525852894
+        },
+        {
+          "active_seconds": 8453.63274010003,
+          "hypervolume": 0.41221720981539484
+        },
+        {
+          "active_seconds": 10486.799893700052,
+          "hypervolume": 0.41221720981539484
+        },
+        {
+          "active_seconds": 12393.806485899957,
+          "hypervolume": 0.41221720981539484
+        },
+        {
+          "active_seconds": 14283.731502200011,
+          "hypervolume": 0.41221720981539484
+        },
+        {
+          "active_seconds": 16168.03199509997,
+          "hypervolume": 0.41221720981539484
+        }
+      ],
+      "method": "motpe",
+      "overrun_seconds": 0.0,
+      "pareto_count": 4,
+      "proposed_candidates": 8,
+      "pruning": false,
+      "run": "C:\\Users\\ANKIT\\Documents\\CS400\\runs\\main-motpe-full",
+      "seed": 42,
+      "stop_reason": "insufficient_estimated_budget_for_next_cohort"
+    }
+  ]
+}

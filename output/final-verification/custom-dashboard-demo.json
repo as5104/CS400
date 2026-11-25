@@ -1,0 +1,50 @@
+{
+  "run": "local-bcc476a6d8004b078367bb825d1790e0",
+  "status": "passed",
+  "job_complete": true,
+  "active_seconds": 834.8004666999914,
+  "candidates": 140,
+  "completed": 38,
+  "early_stopped": 102,
+  "cohorts": 34,
+  "promotion_decisions_rechecked": 68,
+  "completed_checkpoint_and_evaluation_identities_verified": 38,
+  "pareto_independently_recomputed": true,
+  "exports_and_clean_test_predictions_verified": [
+    {
+      "candidate_id": "bd1d3616b9f5bcae988260140823022953a162d4337fc4ef9fa035aafa7fa2a8",
+      "parameters": 1596322,
+      "training_seconds": 6.129580599954352,
+      "validation_accuracy": 1.0,
+      "clean_test_accuracy": 1.0,
+      "example_predictions": {
+        "circle": "circle",
+        "square": "square"
+      }
+    },
+    {
+      "candidate_id": "e591e8832a2b045b5f2528b1a70dfa09ebace88ed5e0ea0ad00a6ec06c62fbe4",
+      "parameters": 1573658,
+      "training_seconds": 6.332490399945527,
+      "validation_accuracy": 1.0,
+      "clean_test_accuracy": 1.0,
+      "example_predictions": {
+        "circle": "circle",
+        "square": "square"
+      }
+    },
+    {
+      "candidate_id": "f835811d5c98be8719557526b776001849c16e53e4bef53c64222059615aef50",
+      "parameters": 307794,
+      "training_seconds": 6.353279999922961,
+      "validation_accuracy": 1.0,
+      "clean_test_accuracy": 1.0,
+      "example_predictions": {
+        "circle": "circle",
+        "square": "square"
+      }
+    }
+  ],
+  "training_started_by_audit": false,
+  "note": "Synthetic workflow demonstration only; 60 test images; timing differences are small and hardware dependent."
+}
